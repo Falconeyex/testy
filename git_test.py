@@ -19,3 +19,7 @@ print(soup.prettify())
 all_p = soup.find_all('p')
 for p in all_p:
     print(p)
+
+all_divs = soup.find_all('div')
+for div in all_divs:
+    print(div)
