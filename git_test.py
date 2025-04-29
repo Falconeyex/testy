@@ -23,3 +23,7 @@ for p in all_p:
 all_divs = soup.find_all('div')
 for div in all_divs:
     print(div)
+
+all_a = soup.find_all('a')
+for a in all_a:
+    print(a.text)
