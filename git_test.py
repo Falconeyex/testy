@@ -1,4 +1,5 @@
 import requests as rq
+import bs4 as bs
 
 url = 'https://microview.cz/index.html'
 
@@ -11,3 +12,10 @@ for i in response.iter_lines():
 print(response_headers)
 
 print(response.text)
+
+soup = bs.BeautifulSoup(response.text,'html.parser')
+print(soup.prettify())
+
+all_p = soup.find_all('p')
+for p in all_p:
+    print(p)
